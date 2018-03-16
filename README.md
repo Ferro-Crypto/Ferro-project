@@ -11,7 +11,7 @@ Portions Copyright (c) 2012-2013, The Cryptonote developers
 - Web: [ferro.cash](https://ferro.cash)
 - Forum: [forum.getferro.org](https://forum.getferro.org)
 - Mail: [support@ferro.cash](mailto:support@ferro.cash)
-- GitHub: [https://github.com/MrLuxeon/Ferro-project](https://github.com/MrLuxeon/Ferro-project)
+- GitHub: [https://github.com/Ferro-Crypto/Ferro-project](https://github.com/Ferro-Crypto/Ferro-project)
 
 
 ## Introduction
