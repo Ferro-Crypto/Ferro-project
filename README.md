@@ -22,7 +22,7 @@ Ferro is a fork from Monero. Ferro is a private, secure, untraceable, decentrali
 
 **Untraceability:** By taking advantage of ring signatures, a special property of a certain type of cryptography, Ferro is able to ensure that transactions are not only untraceable, but have an optional measure of ambiguity that ensures that transactions cannot easily be tied back to an individual user or computer.
 
-##Coin Supply & Emission
+## Coin Supply & Emission
 
 * Total supply: 15.000.000 coins in first 20 years, then 44.800 coins each year for inflation. About 10% (~1.5 million) was premined to reserve for future development, i.e. 13.5 million coins available for community mining.
 
