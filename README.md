@@ -24,7 +24,7 @@ Ferro is a fork from Monero. Ferro is a private, secure, untraceable, decentrali
 
 ## Coin Supply & Emission
 
-* Total supply: 15.000.000 coins in first 20 years, then 44.800 coins each year for inflation. About 10% (~1.5 million) was premined to reserve for future development, i.e. 13.5 million coins available for community mining.
+* Total supply: 15.000.000 coins in first 8 years, then 44.800 coins each year for inflation. About 10% (~1.5 million) was premined to reserve for future development, i.e. 13.5 million coins available for community mining.
 
 * Coin symbol: XFR
 
