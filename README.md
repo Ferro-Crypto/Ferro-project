@@ -1,25 +1,34 @@
 # Ferro
 
-Copyright (c) 2014-2017, The Ferro Project
+Copyright (c) 2017-2018, The Ferro Project
+Copyright (c) 2014-2017, The Monero Project
 Portions Copyright (c) 2012-2013, The Cryptonote developers
 
 ## Development Resources
 
-- Web: [getferro.org](https://getferro.org)
+- Web: [ferro.cash](https://ferro.cash)
 - Forum: [forum.getferro.org](https://forum.getferro.org)
-- Mail: [dev@getferro.org](mailto:dev@getferro.org)
-- GitHub: [https://github.com/ferro-project/ferro](https://github.com/ferro-project/ferro)
-- IRC: [#ferro-dev on Freenode](http://webchat.freenode.net/?randomnick=1&channels=%23ferro-dev&prompt=1&uio=d4)
+- Mail: [support@ferro.cash](mailto:support@ferro.cash)
+- GitHub: [https://github.com/MrLuxeon/Ferro-project](https://github.com/MrLuxeon/Ferro-project)
+
 
 ## Introduction
 
-Ferro is a private, secure, untraceable, decentralised digital currency. You are your bank, you control your funds, and nobody can trace your transfers unless you allow them to do so.
+Ferro is a fork from Monero. Ferro is a private, secure, untraceable, decentralised digital currency. You are your bank, you control your funds, and nobody can trace your transfers unless you allow them to do so.
 
 **Privacy:** Ferro uses a cryptographically sound system to allow you to send and receive funds without your transactions being easily revealed on the blockchain (the ledger of transactions that everyone has). This ensures that your purchases, receipts, and all transfers remain absolutely private by default.
 
 **Security:** Using the power of a distributed peer-to-peer consensus network, every transaction on the network is cryptographically secured. Individual wallets have a 25 word mnemonic seed that is only displayed once, and can be written down to backup the wallet. Wallet files are encrypted with a passphrase to ensure they are useless if stolen.
 
 **Untraceability:** By taking advantage of ring signatures, a special property of a certain type of cryptography, Ferro is able to ensure that transactions are not only untraceable, but have an optional measure of ambiguity that ensures that transactions cannot easily be tied back to an individual user or computer.
+
+##Coin Supply & Emission
+
+* Total supply: 15.000.000 coins in first 20 years, then 44.800 coins each year for inflation. About 10% (~1.5 million) was premined to reserve for future development, i.e. 13.5 million coins available for community mining.
+
+* Coin symbol: XFR
+
+* Hash algorithm: CryptoNight (Proof-Of-Work)
 
 ## About this Project
 
@@ -29,65 +38,9 @@ As with many development projects, the repository on Github is considered to be 
 
 **Anyone is welcome to contribute to Ferro's codebase!** If you have a fix or code change, feel free to submit it as a pull request directly to the "master" branch. In cases where the change is relatively small or does not affect other parts of the codebase it may be merged in immediately by any one of the collaborators. On the other hand, if the change is particularly large or complex, it is expected that it will be discussed at length either well in advance of the pull request being submitted, or even directly on the pull request.
 
-## Supporting the Project
-
-Ferro development can be supported directly through donations.
-
-Both Ferro and Bitcoin donations can be made to donate.getferro.org if using a client that supports the [OpenAlias](https://openalias.org) standard
-
-The Ferro donation address is: `FWXDzToBtNHCJooVmoHs6FhkRBQ3pbNfHj5mBscyw7nETvJ9sBs1EikGQ7ixFRRc7FZoULgA2xL1M2LnaP5E4Ky2CKU5Zra` (viewkey: `f359631075708155cc3d92a32b75a7d02a5dcf27756707b47a2b31b21c389501`)
-
-The Bitcoin donation address is: `1KTexdemPdxSBcG55heUuTjDRYqbC5ZL8H`
-
-*Note: you can easily donate XMR to the Ferro donation address by using the `donate` command. Type `help` in the command-line wallet for details.*
-
-Core development funding and/or some supporting services are also graciously provided by sponsors:
-
-There are also several mining pools that kindly donate a portion of their fees, [a list of them can be found on our Bitcointalk post](https://bitcointalk.org/index.php?topic=583449.0).
-
 ## License
 
 See [LICENSE](LICENSE).
-
-# Contributing
-
-If you want to help out, see [CONTRIBUTING](CONTRIBUTING.md) for a set of guidelines.
-
-## Vulnerability Response Process
-
-See [Vulnerability Response Process](VULNERABILITY_RESPONSE_PROCESS.md).
-
-## Ferro software updates and consensus protocol changes (hard fork schedule)
-
-Ferro uses a fixed-schedule hard fork mechanism to implement new features. This means that users of Ferro (end users and service providers) need to run current versions and update their software on a regular schedule. Here is the current schedule, versions, and compatibility.
-Dates are provided in the format YYYY-MM-DD. 
-
-Installing Ferro from a Package
-
-Packages are available for
-
-* Ubuntu and [snap supported](https://snapcraft.io/docs/core/install) systems, via a community contributed build.
-
-    snap install ferro --beta
-
-Installing a snap is very quick. Snaps are secure. They are isolated with all of their dependencies. Snaps also auto update when a new version is released.
-
-* OS X via [Homebrew](http://brew.sh)
-
-        brew tap sammy007/cryptonight
-        brew install ferro --build-from-source
-
-* Docker
-
-        docker build -t ferro .
-     
-        # either run in foreground
-        docker run -it -v /ferro/chain:/root/.bitferro -v /ferro/wallet:/wallet -p 18080:18080 ferro
-
-        # or in background
-        docker run -it -d -v /ferro/chain:/root/.bitferro -v /ferro/wallet:/wallet -p 18080:18080 ferro
-
-Packaging for your favorite distribution would be a welcome contribution!
 
 ## Compiling Ferro from Source
 
@@ -278,15 +231,6 @@ https://github.com/bitcoin/bitcoin/blob/master/doc/build-openbsd.md
 You will have to add the serialization, date_time, and regex modules to Boost when building as they are needed by Ferro.
 
 To build: `env CC=egcc CXX=eg++ CPP=ecpp DEVELOPER_LOCAL_TOOLS=1 BOOST_ROOT=/path/to/the/boost/you/built make release-static-64`
-
-### On Linux for Android (using docker):
-
-        # Build image (select android64.Dockerfile for aarch64)
-        cd utils/build_scripts/ && docker build -f android32.Dockerfile -t ferro-android .
-        # Create container
-        docker create -it --name ferro-android ferro-android bash
-        # Get binaries
-        docker cp ferro-android:/opt/android/ferro/build/release/bin .
 
 ### Building Portable Statically Linked Binaries
 
