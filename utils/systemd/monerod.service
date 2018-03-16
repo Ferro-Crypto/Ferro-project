@@ -1,0 +1,17 @@
+[Unit]
+Description=Ferro Full Node
+After=network.target
+
+[Service]
+User=ferro
+Group=ferro
+WorkingDirectory=~
+
+Type=forking
+PIDFile=/var/run/ferrod.pid
+
+ExecStart=/usr/bin/ferrod --config-file /etc/ferrod.conf \
+    --detach --pidfile /var/run/ferrod.pid
+
+[Install]
+WantedBy=multi-user.target
